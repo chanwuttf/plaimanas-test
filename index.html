@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Plaimanas</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="header__container">
+        <div class="header__body">
+            <div class="header__dropdown-wrapper">
+                <div class="header__dropdown">
+                    <a href="javascript:;" class="btn btn--dropdown">TH - THB</a>
+                    <div class="header__dropdown-menu">
+                        <a class="header__dropdown-item" href="javascript:;">US - USD</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="header__menu-wrapper">
+                <a href="javascript:;" class="header__burger-button"></a>
+                <ul class="header__menu">
+                    <li class="header__menu-item header__menu-item--lv-1">
+                        <a href="javascript:;" class="header__menu-link header__menu-link--lv-1">Women</a>
+                    </li>
+                    <li class="header__menu-item header__menu-item--lv-1">
+                        <a href="javascript:;" class="header__menu-link header__menu-link--lv-1">Collections</a>
+                    </li>
+                    <li class="header__menu-item header__menu-item--lv-1 header__menu-item--has-child">
+                        <a href="javascript:;" class="header__menu-link header__menu-link--lv-1">Editorial</a>
+                        <ul class="header__sub-menu">
+                            <li class="header__menu-item header__menu-item--lv-2">
+                                <a href="javascript:;" class="header__menu-link header__menu-link--lv-2">A.S.C</a>
+                            </li>
+                            <li class="header__menu-item header__menu-item--lv-2">
+                                <a href="javascript:;" class="header__menu-link header__menu-link--lv-2">BAZAAR</a>
+                            </li>
+                            <li class="header__menu-item header__menu-item--lv-2">
+                                <a href="javascript:;" class="header__menu-link header__menu-link--lv-2">ELLE</a>
+
+                            </li>
+                            <li class="header__menu-item header__menu-item--lv-2">
+                                <a href="javascript:;" class="header__menu-link header__menu-link--lv-2">GQ</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="header__menu-item header__menu-item--lv-1">
+                        <a href="javascript:;" class="header__menu-link header__menu-link--lv-1">News</a>
+                    </li>
+                    <li class="header__menu-item header__menu-item--lv-1">
+                        <a href="javascript:;" class="header__menu-link header__menu-link--lv-1">Stories</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__side-menu">
+                <a href="javascript:;" class="header__btn">
+                    <span class="header__btn-title">Sign In</span>
+                </a>
+                <a href="javascript:;" class="header__btn header__btn--icon">
+                    <img src="./assets/icon-shop.svg" alt="" class="header__btn-icon"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <img src="./assets/logo.svg" alt="Plaimanas" class="logo-sticky"/>
+
+    <section class="hero-banner">
+        <video src="./assets/hero-banner-video.mp4" playsinline loop autoplay muted class="hero-banner__media"></video>
+        <!--<img src="" alt="" class="hero-banner__media">-->
+    </section>
+
+    <section class="section section--space-b-0">
+        <div class="container">
+            <div class="card card--media-sticky">
+                <div class="card__media-wrapper">
+                    <img src="./assets/img-01.jpg" alt="" class="card__img">
+                    <h2 class="card__text-sticky">New</h2>
+                </div>
+                <div class="card__body">
+                    <h6 class="card__title">Sed egestas, nibh a condimentum imperdiet</h6>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non
+                        rhoncus commodo,
+                        turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--space-b-0">
+        <div class="container-fluid">
+            <div class="card card--media-sticky card--media-sticky-lg">
+                <div class="card__media-wrapper">
+                    <video src="./assets/bestseller-video.mp4" playsinline loop autoplay muted
+                           class="card__video"></video>
+                    <h2 class="card__text-sticky">Bestseller</h2>
+                </div>
+                <div class="card__body">
+                    <h6 class="card__title">Sed egestas, nibh a condimentum imperdiet</h6>
+                    <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non
+                        rhoncus commodo,
+                        turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--space-b-0">
+        <div class="container">
+            <div class="card-deck card-deck--collection">
+                <div class="card card--video-overlay">
+                    <div class="card__media-wrapper">
+                        <img src="./assets/img-02.jpg" alt="" class="card__media">
+                        <video src="./assets/collection-video.mp4" playsinline loop autoplay muted
+                               class="card__media card__media--overlay"></video>
+                        <h6 class="card__text-sticky">Collection 01</h6>
+                    </div>
+                </div>
+                <div class="card card--video-overlay card--video-overlay-sm">
+                    <div class="card__media-wrapper">
+                        <img src="./assets/img-03.jpg" alt="" class="card__media">
+                        <img src="./assets/img-05.jpg" alt="" class="card__media card__media--overlay">
+                        <h6 class="card__text-sticky">Collection 02</h6>
+                    </div>
+                </div>
+                <div class="card card--video-overlay card--video-overlay-sm">
+                    <div class="card__media-wrapper">
+                        <img src="./assets/img-04.jpg" alt="" class="card__media">
+                        <img src="./assets/img-05.jpg" alt="" class="card__media card__media--overlay">
+                        <h6 class="card__text-sticky">Collection 03</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section section--space-b-0">
+        <div class="text-slider">
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="text-slider__body">
+                            <img src="./assets/arrow-left.svg" alt="" class="text-slider__icon"/>
+                            <div class="text-slider__text">Best Selling</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text-slider__body">
+                            <img src="./assets/arrow-right.svg" alt="" class="text-slider__icon"/>
+                            <div class="text-slider__text">New Arrival</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text-slider__body">
+                            <img src="./assets/arrow-left.svg" alt="" class="text-slider__icon"/>
+                            <div class="text-slider__text">Best Selling</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text-slider__body">
+                            <img src="./assets/arrow-right.svg" alt="" class="text-slider__icon"/>
+                            <div class="text-slider__text">New Arrival</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text-slider__body">
+                            <img src="./assets/arrow-left.svg" alt="" class="text-slider__icon"/>
+                            <div class="text-slider__text">Best Selling</div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="text-slider__body">
+                            <img src="./assets/arrow-right.svg" alt="" class="text-slider__icon"/>
+                            <div class="text-slider__text">New Arrival</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="our-service">
+                <div class="our-service__item">
+                    <h6 class="our-service__title">Worldwide Shipping</h6>
+                    <p class="our-service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+                        nisl non rhoncus commodo,
+                        turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae
+                    </p>
+                </div>
+                <div class="our-service__item">
+                    <h6 class="our-service__title">Customer Service</h6>
+                    <p class="our-service__text"><u>Lorem ipsum dolor sit amet</u>, consectetur adipiscing elit. Nam
+                        ornare, nisl non rhoncus commodo,
+                        turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae
+                    </p>
+                </div>
+                <div class="our-service__item">
+                    <h6 class="our-service__title">Secure Payment</h6>
+                    <p class="our-service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare,
+                        nisl non rhoncus commodo,
+                        turpis elit ultricies justo, vitae molestie quam justo ut lacus. Proin vitae
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section frequently-question">
+        <div class="container">
+            <div class="frequently-question__header">
+                <h2 class="frequently-question__headline">Frequently Asked Questions</h2>
+                <p class="frequently-question__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam ornare, nisl non rhoncus commodo.</p>
+            </div>
+            <div class="frequently-question__body">
+                <div class="tab">
+                    <div class="tab__menu">
+                        <a href="#orders" class="tab__menu-link">Orders</a>
+                        <a href="#shipping" class="tab__menu-link">Shipping</a>
+                        <a href="#returns-exchanges" class="tab__menu-link">Returns & Exchanges</a>
+                        <a href="#sizing-products" class="tab__menu-link">Sizing & Products</a>
+                    </div>
+                    <div class="tab__content">
+                        <div class="tab__content-item" id="orders">
+                            <div class="accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <h6 class="accordion__title">What is your return policy?</h6>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <p>Items can be returned within 14 days of receipt, provided they are unworn, unwashed, and in original condition with tags attached.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <h6 class="accordion__title">Can I exchange for a different size?</h6>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam harum illo iusto mollitia nihil odio officia quos reiciendis suscipit veritatis.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <h6 class="accordion__title">Are sale items refundable?</h6>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam harum illo iusto mollitia nihil odio officia quos reiciendis suscipit veritatis.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam harum illo iusto mollitia nihil odio officia quos reiciendis suscipit veritatis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content-item" id="shipping">
+                            <div class="accordion">
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <h6 class="accordion__title">What is your return policy?</h6>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <p>Items can be returned within 14 days of receipt, provided they are unworn, unwashed, and in original condition with tags attached.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <h6 class="accordion__title">Can I exchange for a different size?</h6>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam harum illo iusto mollitia nihil odio officia quos reiciendis suscipit veritatis.</p>
+                                    </div>
+                                </div>
+                                <div class="accordion__item">
+                                    <div class="accordion__header">
+                                        <h6 class="accordion__title">Are sale items refundable?</h6>
+                                    </div>
+                                    <div class="accordion__content">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam harum illo iusto mollitia nihil odio officia quos reiciendis suscipit veritatis.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab__content-item" id="returns-exchanges">
+
+                        </div>
+                        <div class="tab__content-item" id="sizing-products">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="footer" aria-label="Footer">
+    <div class="container footer__grid">
+        <div class="footer__col"></div>
+        <div class="footer__col"></div>
+        <div class="footer__col"></div>
+        <div class="footer__col"></div>
+        <div class="footer__col footer__newsletter"></div>
+    </div>
+    <div class="container footer__bottom">
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
