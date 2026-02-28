@@ -523,7 +523,7 @@ a {
         max-width: 100%;
         flex: 1;
 
-        @media only screen and (max-width: 991.98px) {
+        @media only screen and (max-width: 767.98px) {
             width: calc(50% - 10px);
             flex: auto;
         }
@@ -556,10 +556,14 @@ a {
 
     .footer__menu {
         list-style: none;
+        margin: 0;
     }
 
     .footer__menu-item {
-        margin-bottom: 19px;
+
+        &:not(:last-child) {
+            margin-bottom: 19px;
+        }
     }
 
     .footer__menu-link {
@@ -625,6 +629,7 @@ a {
 
     @media only screen and (max-width: 767.98px) {
         top: calc(45px + 11px);
+        padding: 0 6px;
     }
 }
 

@@ -93,7 +93,6 @@ function initMenuChild() {
         isOpen ? closeMenu() : openMenu();
     });
 
-    // ปิดเมื่อคลิกที่อื่น
     document.addEventListener("click", (e) => {
         if (!wrapper.contains(e.target)) {
             if (menu.classList.contains("show")) {
@@ -120,19 +119,21 @@ function initStickyLogo() {
     const logo = document.querySelector(".logo-sticky");
     if (!logo) return;
 
-    const minSize = 310;      // ต่ำสุด
-    const scrollRange = 768;  // ระยะ scroll ที่ให้ลดครบ
+    const minSize = 310;
 
     function updateLogoSize() {
         const viewportWidth = window.innerWidth;
         const scrollY = window.scrollY;
 
-        // progress 0 → 1
+        const scrollRange =
+            document.documentElement.scrollHeight - window.innerHeight;
+
         const progress = Math.min(scrollY / scrollRange, 1);
 
-        // ขนาดใหม่: จาก 100vw → 310px
+        const easedProgress = Math.sqrt(progress);
+
         const newWidth =
-            viewportWidth - (viewportWidth - minSize) * progress;
+            viewportWidth - (viewportWidth - minSize) * easedProgress;
 
         logo.style.width = newWidth + "px";
     }
@@ -147,9 +148,11 @@ function initStickyLogo() {
             });
             ticking = true;
         }
-    });
+    }, { passive: true });
 
     window.addEventListener("resize", updateLogoSize);
+
+    updateLogoSize();
 }
 
 /* ---------------------------
