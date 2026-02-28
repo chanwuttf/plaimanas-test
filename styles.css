@@ -474,13 +474,7 @@ a {
 }
 
 .footer {
-    position: relative;
-    padding: 32px 60px;
     background-color: #F8F9F8;
-
-    @media only screen and (max-width: 767.98px) {
-        padding: 32px 20px;
-    }
 
     .footer__back-to-top {
         position: absolute;
@@ -493,6 +487,23 @@ a {
 
         @media only screen and (max-width: 767.98px) {
             bottom: calc(100% + 10px);
+        }
+    }
+
+    .footer__container {
+        position: relative;
+        max-width: var(--container);
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 32px 60px;
+
+        @media only screen and (max-width: 991.98px) {
+            padding: 32px 40px;
+        }
+
+        @media only screen and (max-width: 767.98px) {
+            padding: 32px 20px;
         }
     }
 
