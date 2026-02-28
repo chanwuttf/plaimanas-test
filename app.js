@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     initScrollingTextSwiper();
     initTabs();
     initAccordion();
+    initBackToTop();
 });
 
 /* ---------------------------
@@ -215,25 +216,49 @@ function initTabs() {
  * Accordion
  * --------------------------- */
 function initAccordion() {
-    document.querySelectorAll(".accordion__item").forEach((item) => {
+    const items = document.querySelectorAll(".accordion__item");
+
+    items.forEach((item, index) => {
         const header = item.querySelector(".accordion__header");
         const content = item.querySelector(".accordion__content");
 
-        // เริ่มต้นปิด
-        content.style.maxHeight = null;
+        // ถ้าเป็นตัวแรก → เปิดไว้เลย
+        if (index === 0) {
+            item.classList.add("active");
+            content.style.maxHeight = content.scrollHeight + "px";
+        } else {
+            content.style.maxHeight = null;
+        }
 
         header.addEventListener("click", () => {
             const isOpen = item.classList.contains("active");
 
             if (isOpen) {
-                // ปิด
                 item.classList.remove("active");
                 content.style.maxHeight = null;
             } else {
-                // เปิด
                 item.classList.add("active");
                 content.style.maxHeight = content.scrollHeight + "px";
             }
         });
+    });
+
+    // กันกรณี resize แล้วความสูงเพี้ยน
+    window.addEventListener("resize", () => {
+        document.querySelectorAll(".accordion__item.active").forEach(item => {
+            const content = item.querySelector(".accordion__content");
+            content.style.maxHeight = content.scrollHeight + "px";
+        });
+    });
+}
+
+/* ---------------------------
+ * Back to Top
+ * --------------------------- */
+function initBackToTop() {
+    const backToTop = document.querySelector(".footer__back-to-top");
+
+    backToTop.addEventListener('click', e => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
     });
 }
